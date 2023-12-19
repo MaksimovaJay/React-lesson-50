@@ -1,0 +1,18 @@
+.poster {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+
+}
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+
+}
+.person {
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    height: auto;
+    background: linear-gradient(45deg, #f5f7fa, #c3cfe2);}

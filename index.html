@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+    const Person = ({name, date, photo}) => {
+        return (
+
+            <div className="person">
+                <img className="poster" src={photo} alt={'Photo of ' + name} />
+                <h1>{name}</h1>
+                <p>Дата выпуска : {date}</p>
+            </div>
+        );
+    };
+    const people = (
+        <div className="wrapper">
+            <Person name="Harry Potter" date="19 ноября 2010 г." photo="https://cs9.pikabu.ru/post_img/2017/02/19/4/1487481861170016714.jpg" />
+            <Person name="Harry Potter" date="19 ноября 2010 г." photo="https://cs9.pikabu.ru/post_img/2017/02/19/4/1487481861170016714.jpg" />
+            <Person name="Harry Potter" date="19 ноября 2010 г." photo="https://cs9.pikabu.ru/post_img/2017/02/19/4/1487481861170016714.jpg" />
+            <Person name="Andre" date="6 мая 2022 г." photo="https://i.ibb.co/5MHdXpr/IZ7TTtWD.jpg"/>
+            <Person name="Andre" date="6 мая 2022 г." photo="https://i.ibb.co/5MHdXpr/IZ7TTtWD.jpg"/>
+            <Person name="Andre" date="6 мая 2022 г." photo="https://i.ibb.co/5MHdXpr/IZ7TTtWD.jpg"/>
+        </div>
+    );
+    let ReactDOM;
+    ReactDOM.render(people, document.getElementById('app'));
+</script>
+
+</body>
+</html>
